@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Radio258", "Radio258\Radio258.csproj", "{0D6DAA3A-3039-4EE7-B949-081631763546}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestRadio258", "UnitTestRadio258\UnitTestRadio258.csproj", "{28F4249A-8387-4DF5-9523-3D997D73B7A7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{0D6DAA3A-3039-4EE7-B949-081631763546}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D6DAA3A-3039-4EE7-B949-081631763546}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D6DAA3A-3039-4EE7-B949-081631763546}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28F4249A-8387-4DF5-9523-3D997D73B7A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28F4249A-8387-4DF5-9523-3D997D73B7A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28F4249A-8387-4DF5-9523-3D997D73B7A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28F4249A-8387-4DF5-9523-3D997D73B7A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
