@@ -17,8 +17,6 @@ namespace Radio258
         private string weatherStation;
         private string weatherPerson;
         private double[] temperatures = new double[7];
-        private DateTime hottestDate;
-        private DateTime coldestDate;
         #endregion
 
         #region Properties
@@ -37,14 +35,32 @@ namespace Radio258
         {
             get
             {
+                double max = Max;
+                DateTime hottestDate = FirstDateOfWeek;
+                for(int i = 0; i < temperatures.Length; i++)
+                {
+                    if (temperatures[i] == max) return FirstDateOfWeek.AddDays(i);
+                }
                 return hottestDate;
             }
         }
 
+        /// <summary>
+        /// Gets the hottest date.
+        /// </summary>
+        /// <value>
+        /// The hottest date.
+        /// </value>
         public DateTime ColdestDate
         {
             get
             {
+                double min = Min;
+                DateTime coldestDate = FirstDateOfWeek;
+                for (int i = 0; i < temperatures.Length; i++)
+                {
+                    if (temperatures[i] == min) return FirstDateOfWeek.AddDays(i);
+                }
                 return coldestDate;
             }
         }
@@ -59,14 +75,12 @@ namespace Radio258
             get
             {
                 double max = Temperatures[0];
-                hottestDate = firstDateOfWeek;
                 for (int i = 1; i < Temperatures.Length; i++)
                 {
                     if (Temperatures[i] > max)
                     {
                         // Vervang de waarde in max door de waarde in de array op positie i
                         max = Temperatures[i];
-                        hottestDate = firstDateOfWeek.AddDays(i);
                     }
                 }
                 return max;
@@ -85,7 +99,6 @@ namespace Radio258
             get
             {
                 double min = Temperatures[0];
-                coldestDate = firstDateOfWeek;
                 for (int i = 1; i < Temperatures.Length; i++)
                 {
                     if (Temperatures[i] < min)
@@ -93,7 +106,6 @@ namespace Radio258
                         // Vervang de waarde in min door de waarde in de array op positie i
                         min = Temperatures[i];
                         // Sla de datum van de koudste dag op in veld kpudsteDag
-                        coldestDate = firstDateOfWeek.AddDays(i);
                     }
                 }
                 return min;
@@ -134,6 +146,9 @@ namespace Radio258
 
         #endregion
 
+        #region Constructors
+
+        #endregion
         #region Methods
 
         /// <summary>
